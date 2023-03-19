@@ -5,5 +5,25 @@
     <link>https://jeanjhoh.github.io/</link>
     <description>Recent content on Jean Joohyun Oh</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://jeanjhoh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>https://jeanjhoh.github.io/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeanjhoh.github.io/cv/</guid>
+      <description>You can find my latest CV here.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://jeanjhoh.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeanjhoh.github.io/research/</guid>
+      <description>Peer-Reviewed Publications Climate Change Framing and Innovator Attention: Evidence from an Email Field Experiment. With Jorge Guzman and Ananya Sen. Proceedings of the National Academy of Sciences (PNAS), 2023. [paper]
+Mapping the Class Ceiling: The Social Class Disadvantage for Attaining Management Positions. With Paul Ingram. Academy of Management Discoveries, 2022. [paper]
+What Motivates Innovative Entrepreneurs? Evidence from a Global Field Experiment. With Jorge Guzman and Ananya Sen. Management Science, 2020. [paper]</description>
+    </item>
+    
   </channel>
 </rss>
