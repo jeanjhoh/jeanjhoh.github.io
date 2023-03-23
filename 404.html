@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>404 Page not found | Jean Joohyun Oh</title>
+<title>404 Page not found | JEAN JOOHYUN OH</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="Personal Website of Jean Joohyun Oh">
 <meta name="author" content="">
 <link rel="canonical" href="https://jeanjhoh.github.io/404.html" />
-<link href="/assets/css/stylesheet.min.335272112c5ae8060855442e7b7810ac57d7230ab0db265e1c9a6cd9cdf5af21.css" integrity="sha256-M1JyESxa6AYIVUQue3gQrFfXIwqw2yZeHJps2c31ryE=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.ab2ba69ae1632b2ebe9a1048c0106ed647aa98587c891c27a76f209b9b5ec7c9.css" integrity="sha256-qyummuFjKy6&#43;mhBIwBBu1keqmFh8iRwnp28gm5tex8k=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://jeanjhoh.github.io/favicon.ico">
@@ -39,11 +39,7 @@
 
 <body class="list" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -60,30 +56,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://jeanjhoh.github.io/" accesskey="h" title="Jean Joohyun Oh (Alt + H)">Jean Joohyun Oh</a>
+            <a href="https://jeanjhoh.github.io/" accesskey="h" title="JEAN JOOHYUN OH (Alt + H)">JEAN JOOHYUN OH</a>
             <span class="logo-switches">
-                <span class="theme-toggle" title="(Alt + T)">
-                    <a id="theme-toggle" accesskey="t">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </a>
-                </span>
                 
             </span>
         </div>
@@ -110,7 +84,7 @@
 <div class="not-found">404</div>
 
     </main><footer class="footer">
-    <span>&copy; 2023 Jean Joohyun Oh</span>
+    <span>&copy; 2023 JEAN JOOHYUN OH</span>
     
     
 </footer>
@@ -162,18 +136,6 @@
     function menu_on_scroll() {
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 
