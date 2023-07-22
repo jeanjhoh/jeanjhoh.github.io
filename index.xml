@@ -6,6 +6,16 @@
     <description>Recent content on JEAN JOOHYUN OH</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://jeanjhoh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About Me</title>
+      <link>https://jeanjhoh.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeanjhoh.github.io/about/</guid>
+      <description>I am a PhD candidate in the Management Division at Columbia Business School.
+My research lies at the intersection of entrepreneurship and society. Specifically, I am studying (1) how founder socioeconomic backgrounds impact entrepreneurial outcomes and (2) when and which entrepreneurs are motivated to generate social impact and to solve grand challenges such as climate change. To answer these questions, I employ a variety of methods including field experiments, econometric analysis of archival data, and qualitative interviews.</description>
+    </item>
+    
+    <item>
       <title>CV</title>
       <link>https://jeanjhoh.github.io/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -21,11 +31,12 @@
       
       <guid>https://jeanjhoh.github.io/research/</guid>
       <description>Peer-Reviewed Publications Climate Change Framing and Innovator Attention: Evidence from an Email Field Experiment
-With Jorge Guzman and Ananya Sen. Proceedings of the National Academy of Sciences (PNAS), 2023. [paper]
+(with Jorge Guzman and Ananya Sen) Proceedings of the National Academy of Sciences (PNAS), 2023.
 Mapping the Class Ceiling: The Social Class Disadvantage for Attaining Management Positions
-With Paul Ingram. Academy of Management Discoveries, 2022. [paper]
+(with Paul Ingram) Academy of Management Discoveries, 2022.
 What Motivates Innovative Entrepreneurs? Evidence from a Global Field Experiment
-With Jorge Guzman and Ananya Sen. Management Science, 2020. [paper]</description>
+(with Jorge Guzman and Ananya Sen) Management Science, 2020.
+Working Papers and Works in Progress Privilege and Humble Beginnings: The Effects of Founder and Investor Socioeconomic Background on Startup Funding (Job market paper)</description>
     </item>
     
   </channel>
