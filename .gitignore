@@ -1,0 +1,9 @@
+# Quarto build output and cache
+_site/
+.quarto/
+
+# PAI internal planning files
+Plans/
+
+# macOS
+.DS_Store

@@ -1,0 +1,154 @@
+<script>
+(function () {
+  // Guard: only run once even if script is included twice
+  if (document.documentElement.getAttribute('data-nav-init')) return;
+  document.documentElement.setAttribute('data-nav-init', '1');
+
+  function init() {
+    var sections = Array.from(document.querySelectorAll('section[id]'));
+    var navLinks = Array.from(document.querySelectorAll('.sidebar-nav a'));
+    console.log('[nav-active] init: sections =', sections.length, '| links =', navLinks.length);
+    if (!sections.length || !navLinks.length) return;
+
+    var ACTIVE_COLOR = '#1a56db';
+    var ACTIVE_WEIGHT = '700';
+
+    // Scroll lock: prevent scroll events from overriding a click-set active state
+    // while smooth scroll is still animating.
+    var scrollLocked = false;
+    var lockTimer = null;
+
+    function unlock() {
+      scrollLocked = false;
+      lockTimer = null;
+      onScroll();
+    }
+
+    function setActive(id) {
+      console.log('[nav-active] setActive:', id);
+      document.documentElement.setAttribute('data-active', id);
+      navLinks.forEach(function (a) {
+        var href = a.getAttribute('href') || '';
+        // Handle both bare "#about" and path-prefixed "index.html#about"
+        var isActive = href === '#' + id || href.endsWith('#' + id);
+        if (isActive) {
+          a.style.setProperty('color', ACTIVE_COLOR, 'important');
+          a.style.setProperty('font-weight', ACTIVE_WEIGHT, 'important');
+        } else {
+          a.style.removeProperty('color');
+          a.style.removeProperty('font-weight');
+        }
+      });
+    }
+
+    function onScroll() {
+      if (scrollLocked) return;
+
+      var scrollY = window.scrollY || window.pageYOffset;
+
+      // Bottom of page → activate last section
+      if (scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50) {
+        setActive(sections[sections.length - 1].id);
+        return;
+      }
+
+      // On mobile the header is fixed, so sections land scroll-margin-top pixels
+      // below the viewport top. Use actual header height + buffer as threshold so
+      // those sections are still detected as active.
+      var headerEl = document.querySelector('.sidebar-col');
+      var threshold = (window.innerWidth < 768 && headerEl)
+        ? headerEl.offsetHeight + 15
+        : 10;
+
+      var current = sections[0].id;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= threshold) {
+          current = sections[i].id;
+        }
+      }
+      setActive(current);
+    }
+
+    // Mobile toggle
+    var btn = document.querySelector('.sidebar-toggle');
+    var panel = document.querySelector('.sidebar-collapsible');
+
+    function closeMenu() {
+      if (!panel || !btn) return;
+      panel.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      var icon = btn.querySelector('i');
+      if (icon) icon.className = 'bi bi-chevron-down';
+    }
+
+    if (btn && panel) {
+      btn.addEventListener('click', function () {
+        var open = panel.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(open));
+        var icon = btn.querySelector('i');
+        if (icon) icon.className = open ? 'bi bi-chevron-up' : 'bi bi-chevron-down';
+      });
+    }
+
+    // On click: set active immediately, close mobile menu, then lock so the
+    // scroll animation does not fire onScroll and override it.
+    navLinks.forEach(function (a) {
+      a.addEventListener('click', function () {
+        var href = a.getAttribute('href') || '';
+        // Extract just the fragment, even if Quarto prefixed the path
+        var hash = href.includes('#')
+          ? href.slice(href.lastIndexOf('#') + 1)
+          : href.slice(1);
+        setActive(hash);
+        closeMenu();
+        scrollLocked = true;
+        clearTimeout(lockTimer);
+        // Fallback: unlock after 700ms if scrollend never fires (e.g., older Safari)
+        lockTimer = setTimeout(unlock, 700);
+      });
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // scrollend fires when smooth scroll animation finishes — unlock immediately
+    window.addEventListener('scrollend', function () {
+      clearTimeout(lockTimer);
+      lockTimer = null;
+      scrollLocked = false;
+      onScroll();
+    });
+
+    // Set initial active state
+    onScroll();
+
+    // Paper links: open in new tab automatically
+    document.querySelectorAll('a.paper-link').forEach(function (a) {
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    });
+
+    // Inject dot separators between paper links
+    var seen = new Set();
+    document.querySelectorAll('a.paper-link').forEach(function (a) {
+      var container = a.parentElement;
+      if (!seen.has(container)) {
+        seen.add(container);
+        Array.from(container.querySelectorAll('a.paper-link')).forEach(function (link, i) {
+          if (i > 0) {
+            var sep = document.createElement('span');
+            sep.className = 'paper-sep';
+            sep.textContent = '·';
+            container.insertBefore(sep, link);
+          }
+        });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+}());
+</script>
