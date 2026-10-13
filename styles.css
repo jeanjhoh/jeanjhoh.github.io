@@ -1,0 +1,343 @@
+/* ============================================================
+   Design tokens
+   Layout: top nav, then each section as a row with a sticky
+   heading on the left and content on the right. One shared
+   content width; the page width is derived from it so rules
+   end where the text ends.
+   ============================================================ */
+:root {
+  --bg: #fcfbf9;
+  --fg: #1b1f26;
+  --muted: #646a74;
+  --faint: #9ca3ad;
+  --rule: #e6e4df;
+  --accent: #0b63a6;
+
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 85ch;                 /* content column width */
+  --label: 180px;                  /* section heading column */
+  --gutter: 3rem;                  /* gap between heading and content */
+  --maxw: calc(var(--label) + var(--gutter) + var(--measure));
+  --topbar-h: 3.5rem;
+}
+
+/* ============================================================
+   Quarto / Bootstrap resets
+   ============================================================ */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  padding: 0 16px !important;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#quarto-content {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+#quarto-content h1,
+#quarto-content h2,
+#quarto-content h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.15;
+  text-wrap: balance;
+  color: var(--fg);
+}
+
+#quarto-content p { margin: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+.wrap { max-width: var(--maxw); margin-inline: auto; }
+
+/* ============================================================
+   Top bar
+   ============================================================ */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(252, 251, 249, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  margin-inline: -16px;
+  padding-inline: 16px;
+}
+
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: var(--topbar-h);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+.brand:hover { color: var(--fg); text-decoration: none; }
+
+.topnav { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+.topnav a { color: var(--muted); }
+.topnav a:hover,
+.topnav a.on { color: var(--fg); text-decoration: none; }
+.topnav a.on { box-shadow: inset 0 -1.5px 0 var(--accent); }
+.topnav .ext { font-size: 0.8em; color: var(--faint); }
+
+/* ============================================================
+   Intro (photo, name, title, links)
+   ============================================================ */
+.intro {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  padding-block: 3.5rem 3rem;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--rule);
+}
+
+.intro .name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  letter-spacing: -0.015em;
+}
+
+.intro .title {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  line-height: 1.45;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+.links a { display: inline-flex; align-items: center; gap: 0.4rem; }
+.links svg { width: 15px; height: 15px; flex: none; }
+.links .ext { font-size: 0.8em; color: var(--faint); }
+
+/* ============================================================
+   Sections: Quarto wraps each ## heading in section.level2
+   ============================================================ */
+#quarto-content section.level2 {
+  display: grid;
+  grid-template-columns: var(--label) 1fr;
+  gap: 1.5rem var(--gutter);
+  padding-block: 2.5rem;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: calc(var(--topbar-h) + 0.5rem);
+}
+
+#quarto-content section.level2 > h2 {
+  position: sticky;
+  top: calc(var(--topbar-h) + 1rem);
+  align-self: start;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.sec-body { min-width: 0; max-width: var(--measure); }
+
+/* ============================================================
+   About
+   ============================================================ */
+.prose { display: grid; gap: 1rem; }
+
+/* ============================================================
+   What's new
+   ============================================================ */
+.news { list-style: none; padding: 0; margin: 0; }
+.news li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--rule);
+}
+.news li:first-child { border-top: 0; padding-top: 0; }
+.news time {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.1rem;
+}
+
+/* ============================================================
+   Research
+   ============================================================ */
+.sub {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+.group + .sub { margin-top: 2.25rem; }
+.group { display: grid; }
+
+.paper {
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 0.2rem;
+}
+.paper:first-child { border-top: 0; padding-top: 0; }
+
+/* 1st paragraph: title (+ optional year span) */
+.paper > p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.paper > p:first-child strong { font-weight: 500; }
+.paper .yr {
+  color: var(--faint);
+  font-weight: 400;
+  font-size: 0.85em;
+  margin-left: 0.35em;
+}
+
+/* 2nd paragraph: authors */
+.paper > p:nth-child(2) { font-size: 0.98rem; }
+
+/* 3rd paragraph: venue / status */
+.paper > p:nth-child(3) {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.paper > p:nth-child(3) em { font-style: italic; }
+
+/* Paragraph holding the links */
+.paper > p:has(a.paper-link) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-style: normal;
+  color: var(--accent);
+}
+.paper-link { font-weight: 500; }
+
+/* ============================================================
+   Teaching
+   ============================================================ */
+.teach + .teach { margin-top: 1.75rem; }
+.teach h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.teach h3 .role {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 0.4em;
+}
+
+.courses { list-style: none; margin: 0; padding: 0; }
+.courses li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0.25rem 1rem;
+  align-items: baseline;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.98rem;
+}
+.courses li.nonum { grid-template-columns: 1fr auto; }
+.courses .num {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.courses .who { color: var(--muted); font-size: 0.9rem; }
+.courses .meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-align: right;
+}
+.courses .meta b { font-weight: 500; color: var(--faint); margin-right: 0.6rem; }
+
+/* ============================================================
+   Footer: rule spans the full page like the top bar
+   ============================================================ */
+.footbar {
+  margin-top: 5rem;
+  border-top: 1px solid var(--rule);
+  margin-inline: -16px;
+  padding-inline: 16px;
+}
+.footbar .wrap { padding-block: 1.25rem 2.5rem; }
+.footbar .copy { font-size: 0.85rem; color: var(--muted); }
+
+/* ============================================================
+   Mobile
+   ============================================================ */
+@media (max-width: 760px) {
+  .brand { font-size: 1.05rem; white-space: nowrap; }
+  .topnav { gap: 0.85rem; font-size: 0.82rem; }
+  .topnav a.cv { display: none; }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-block: 2rem;
+  }
+  .intro .photo { width: 150px; }
+
+  #quarto-content section.level2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-block: 2rem;
+  }
+  #quarto-content section.level2 > h2 { position: static; }
+
+  .news li { grid-template-columns: 1fr; gap: 0.2rem; }
+
+  .courses li { grid-template-columns: 4.5rem 1fr; }
+  .courses li.nonum { grid-template-columns: 1fr; }
+  .courses .meta { grid-column: 1 / -1; text-align: left; white-space: normal; }
+}
