@@ -5,128 +5,105 @@ toc: false
 ---
 
 ```{=html}
-<div class="site-wrap">
-  <div class="row g-0">
+<!-- ════════════════════════════════════════════════════
+     TOP BAR
+     ════════════════════════════════════════════════════ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Jean Joohyun Oh</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#whats-new">News</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a class="cv" href="cv.pdf" target="_blank" rel="noopener noreferrer">CV <span class="ext">↗</span></a>
+    </nav>
+  </div>
+</header>
 
-    <!-- ════════════════════════════════════════════════════
-         SIDEBAR
-         ════════════════════════════════════════════════════ -->
-    <div class="col-12 col-md-3 sidebar-col">
-      <div class="sidebar-inner">
+<main class="wrap" id="top">
 
-        <!-- PHOTO — place photo.png in this folder -->
-        <img src="photo.png" alt="Jean Oh" class="profile-photo">
-
-        <!-- NAME & TITLE -->
-        <h1 class="profile-name">Jean Joohyun Oh</h1>
-        <p class="profile-subtitle">
-          Assistant Professor<br>
-          Tepper School of Business<br>
-          Carnegie Mellon University
-        </p>
-
-        <!-- Mobile toggle (JS-controlled, do not edit) -->
-        <button class="sidebar-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
-          MENU <i class="bi bi-chevron-down"></i>
-        </button>
-
-        <!-- LINKS & NAV — visible on desktop; shown via MENU toggle on mobile.
-             Icons: https://icons.getbootstrap.com
-             Add a link by copying any <li> block below.
-             Add a nav item by copying an <a> in the nav and adding a matching section below. -->
-        <div class="sidebar-collapsible">
-          <ul class="sidebar-links">
-            <li>
-              <a href="mailto:jjoh@cmu.edu">
-                <i class="bi bi-envelope"></i> Email
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/jeanoh" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://scholar.google.com/citations?user=Y7fv_WwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-mortarboard"></i> Google Scholar
-              </a>
-            </li>
-            <li>
-              <a href="https://scholars.cmu.edu/26561-jean-joohyun-oh" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-building"></i> CMU Faculty Page
-              </a>
-            </li>
-            <!-- CV — place cv.pdf in this folder -->
-            <li>
-              <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae
-              </a>
-            </li>
-          </ul>
-          <nav class="sidebar-nav">
-            <a href="#about">About</a>
-            <a href="#whats-new">What's New</a>
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
-          </nav>
-        </div>
-
-      </div>
-    </div><!-- /sidebar -->
-
-    <!-- ════════════════════════════════════════════════════
-         MAIN CONTENT
-         ════════════════════════════════════════════════════ -->
-    <div class="col-12 col-md-9 main-col">
-      <div class="main-inner">
+<!-- ════════════════════════════════════════════════════
+     INTRO — photo.jpg lives in this folder
+     ════════════════════════════════════════════════════ -->
+<section class="intro">
+  <img src="photo.jpg" alt="Jean Joohyun Oh" class="photo">
+  <div>
+    <div class="name" role="heading" aria-level="1">Jean Joohyun Oh</div>
+    <p class="title">
+      Assistant Professor of Organizational Theory &amp; Entrepreneurship<br>
+      Tepper School of Business, Carnegie Mellon University
+    </p>
+    <!-- Add a link by copying any <li> below. -->
+    <ul class="links">
+      <li>
+        <a href="mailto:jjoh@cmu.edu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>jjoh@cmu.edu
+        </a>
+      </li>
+      <li><a href="https://scholar.google.com/citations?user=Y7fv_WwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span class="ext">↗</span></a></li>
+      <li><a href="https://www.linkedin.com/in/jeanoh" target="_blank" rel="noopener noreferrer">LinkedIn <span class="ext">↗</span></a></li>
+      <li><a href="https://scholars.cmu.edu/26561-jean-joohyun-oh" target="_blank" rel="noopener noreferrer">CMU faculty page <span class="ext">↗</span></a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener noreferrer">Curriculum vitae <span class="ext">↗</span></a></li>
+    </ul>
+  </div>
+</section>
 ```
 
 ## About {#about}
 
+::: {.sec-body .prose}
 I am an Assistant Professor of Organization Theory and Entrepreneurship at the Tepper School of Business, Carnegie Mellon University. I study the role of entrepreneurship in society, specifically how and when it operates as a channel for upward mobility and as a solution to social problems. My work has been published in peer-reviewed academic journals including *Management Science, PNAS*, and *Academy of Management Discoveries*, and has been covered by Harvard Business Review, Forbes, TechCrunch, and Scientific American.
 
 <!-- My research examines (1) how individuals' socioeconomic origins affect their entrepreneurial outcomes, and (2) how entrepreneurs are motivated by creating social impact and solving specific problems like climate change. To answer these questions, I employ a variety of methods including field experiments, econometric analysis of archival data, and qualitative interviews. My recent work focuses on how the socioeconomic backgrounds of entrepreneurs and investors shape startup investor behaviors. This work was selected as a finalist for the 2023 Organization Science/INFORMS Dissertation Proposal Competition. -->
 
 I received my PhD in Management at Columbia Business School, MS in Strategy and BBA from Seoul National University. I grew up in Upstate New York and Seoul, Korea, and currently live in Pittsburgh. When I am not doing research, I enjoy rowing, cross fit, and spending time with my dog Ravioli.
+:::
 
 ## What's New {#whats-new}
 
+::: sec-body
 ```{=html}
 <!-- To add an item: copy one <li> block. Most recent first. -->
-<ul class="news-list">
+<ul class="news">
   <li>
-    <span class="news-date">Mar 2026</span>
-    <span>
-      Invited seminar talk at Johns Hopkins Carey Business School.<br>
-      Invited presentation at the Reversing the Arrow Conference in San Diego.
-    </span>
+    <time>Mar 2026</time>
+    <span>Invited seminar talk at Johns Hopkins Carey Business School.</span>
+  </li>
+  <li>
+    <time>Mar 2026</time>
+    <span>Invited presentation at the Reversing the Arrow Conference in San Diego.</span>
   </li>
 </ul>
 ```
+:::
 
 ## Research {#research}
 
+:::: sec-body
 ```{=html}
-<!-- To add a paper: copy one ::: paper block in the .qmd source. Most recent first.
-     Format: bold title + year, authors (use [Name](url) for links), *italic venue*, then links.
-     Use {.paper-link} on each link so JS opens it in a new tab automatically.
+<!-- To add a paper: copy one ::: paper block below. Most recent first.
+     Line 1: bold title, then the year as [YEAR]{.yr} (omit for working papers)
+     Line 2: authors (use [Name](url) for links), or "Solo-authored"
+     Line 3: *italic venue or status*
+     Line 4 (optional): links, each tagged {.paper-link} so it opens in a new tab
 
 ::: paper
-**Title of Paper** (YEAR)
+**Title of Paper** [YEAR]{.yr}
 
-Author One, Author Two, Author Three
+Author One, Author Two
 
 *Journal Name*
 
 [Paper](https://url){.paper-link} [Other Link](https://url){.paper-link}
 :::
 -->
-<h3 class="research-sub">Publications</h3>
-<div class="paper-list">
+<div class="sub">Publications</div>
+<div class="group">
 ```
 
 ::: paper
-**Climate Change Framing and Innovator Attention: Evidence from an Email Field Experiment** (2023)
+**Climate Change Framing and Innovator Attention: Evidence from an Email Field Experiment** [2023]{.yr}
 
 [Jorge Guzman](https://www.jorgeguzman.co/), Jean Joohyun Oh, [Ananya Sen](https://sites.google.com/view/ananyasen/home) (equal authorship)
 
@@ -136,7 +113,7 @@ Author One, Author Two, Author Three
 :::
 
 ::: paper
-**Mapping the Class Ceiling: The Social Class Disadvantage for Attaining Management Positions** (2022)
+**Mapping the Class Ceiling: The Social Class Disadvantage for Attaining Management Positions** [2022]{.yr}
 
 [Paul Ingram](https://business.columbia.edu/faculty/people/paul-ingram), Jean Joohyun Oh
 
@@ -147,7 +124,7 @@ Author One, Author Two, Author Three
 :::
 
 ::: paper
-**What Motivates Innovative Entrepreneurs? Evidence from a Global Field Experiment** (2020)
+**What Motivates Innovative Entrepreneurs? Evidence from a Global Field Experiment** [2020]{.yr}
 
 [Jorge Guzman](https://www.jorgeguzman.co/), Jean Joohyun Oh, [Ananya Sen](https://sites.google.com/view/ananyasen/home) (equal authorship)
 
@@ -162,24 +139,24 @@ Author One, Author Two, Author Three
 ```{=html}
 </div>
 
-<h3 class="research-sub">Working Papers & Works in Progress</h3>
-<div class="paper-list">
+<div class="sub">Working papers &amp; works in progress</div>
+<div class="group">
 ```
 
 ::: paper
 **Privilege or Humble Beginnings? Founder and Investor Social Class Origins in Startup Investment Decisions**
 
-Jean Joohyun Oh
+Solo-authored
 
-*Under Review*
+*Under review*
 :::
 
 ::: paper
 **The Class Gap in Venture Capital Funding: The Effect of Elite Private School Pedigree**
 
-Jean Joohyun Oh
+Solo-authored
 
-*Working Paper*
+*Working paper*
 :::
 
 ::: paper
@@ -206,71 +183,65 @@ with [Solène Delecourt](https://sites.google.com/berkeley.edu/solenedelecourt/h
 *Data collection stage*
 :::
 
-
 ```{=html}
 </div>
 ```
+::::
 
 ## Teaching {#teaching}
 
+::: sec-body
 ```{=html}
-<!-- Carnegie Mellon -->
-<h3 class="teaching-sub">Carnegie Mellon University <span class="teaching-role">(Instructor)</span></h3>
-<ul class="course-list">
-  <li>
-    <span class="course-num">47-889</span>
-    <span class="course-name">Proseminar in Organizational Research</span>
-    <span class="course-level">PhD</span>
-    <span class="course-terms">Spr 2026</span>
-  </li>
-  <li>
-    <span class="course-num">70-415</span>
-    <span class="course-name">Introduction to Entrepreneurship</span>
-    <span class="course-level">Undergrad</span>
-    <span class="course-terms">Fall 2025 · Fall 2024</span>
-  </li>
-</ul>
-
-<!-- Columbia (Teaching Assistant) -->
-<h3 class="teaching-sub">Columbia Business School <span class="teaching-role">(Teaching Assistant)</span></h3>
-<ul class="course-list">
-  <li>
-    <span class="course-name">Technology Strategy <span class="teaching-role"> - Dan Wang, Jerry Kim</span></span>
-    <span class="course-level">MBA · EMBA</span>
-    <span class="course-terms">2022-2024</span>
-  </li>
-  <li>
-    <span class="course-name">Entrepreneurial Strategy <span class="teaching-role"> - Jorge Guzman</span></span>
-    <span class="course-level">MBA</span>
-    <span class="course-terms">2023 · 2020</span>
-  </li>
-  <li>
-    <span class="course-name">Foundations of Entrepreneurship <span class="teaching-role"> - Damon Phillips</span></span>
-    <span class="course-level">MBA</span>
-    <span class="course-terms">2020</span>
-  </li>
-  <li>
-    <span class="course-name">Leadership and Organizational Change <span class="teaching-role"> - Paul Ingram</span></span>
-    <span class="course-level">EMBA</span>
-    <span class="course-terms">2018-2021</span>
-  </li>
-  <li>
-    <span class="course-name">Power &amp; Influence <span class="teaching-role"> - Eric Abrahamson</span></span>
-    <span class="course-level">EMBA</span>
-    <span class="course-terms">2018-2020</span>
-  </li>
-</ul>
-```
-
-```{=html}
-      </div>
-    </div><!-- /main -->
-
-  </div>
-
-  <!-- FOOTER — update the year -->
-  <footer class="site-footer">
-    <p>&copy; 2026 Jean Joohyun Oh</p>
-  </footer>
+<!-- To add a course: copy one <li>. Use class="nonum" when there is no course number. -->
+<div class="teach">
+  <h3>Carnegie Mellon University <span class="role">Instructor</span></h3>
+  <ul class="courses">
+    <li>
+      <span class="num">47-889</span>
+      <span>Proseminar in Organizational Research</span>
+      <span class="meta"><b>PhD</b>Spring 2026</span>
+    </li>
+    <li>
+      <span class="num">70-415</span>
+      <span>Introduction to Entrepreneurship</span>
+      <span class="meta"><b>Undergrad</b>Fall 2025 · Fall 2024</span>
+    </li>
+  </ul>
 </div>
+
+<div class="teach">
+  <h3>Columbia Business School <span class="role">Teaching assistant</span></h3>
+  <ul class="courses">
+    <li class="nonum">
+      <span>Technology Strategy <span class="who">· Dan Wang, Jerry Kim</span></span>
+      <span class="meta"><b>MBA · EMBA</b>2022–2024</span>
+    </li>
+    <li class="nonum">
+      <span>Entrepreneurial Strategy <span class="who">· Jorge Guzman</span></span>
+      <span class="meta"><b>MBA</b>2023 · 2020</span>
+    </li>
+    <li class="nonum">
+      <span>Foundations of Entrepreneurship <span class="who">· Damon Phillips</span></span>
+      <span class="meta"><b>MBA</b>2020</span>
+    </li>
+    <li class="nonum">
+      <span>Leadership and Organizational Change <span class="who">· Paul Ingram</span></span>
+      <span class="meta"><b>EMBA</b>2018–2021</span>
+    </li>
+    <li class="nonum">
+      <span>Power &amp; Influence <span class="who">· Eric Abrahamson</span></span>
+      <span class="meta"><b>EMBA</b>2018–2020</span>
+    </li>
+  </ul>
+</div>
+```
+:::
+
+```{=html}
+</main>
+
+<!-- FOOTER — update the year -->
+<footer class="footbar">
+  <div class="wrap"><span class="copy">© 2026 Jean Joohyun Oh</span></div>
+</footer>
 ```

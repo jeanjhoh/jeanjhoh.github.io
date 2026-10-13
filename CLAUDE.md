@@ -19,11 +19,14 @@ quarto render index.qmd
 
 This is a [Quarto](https://quarto.org) website for jeanoh.org.
 
-- **`_quarto.yml`** — site config: title, navbar, theme (cosmo + brand), global CSS
-- **`*.qmd`** — page sources in Quarto Markdown (YAML frontmatter + Markdown + optional R/Python)
-- **`styles.css`** — custom CSS layered on top of the cosmo Bootstrap theme
+- **`_quarto.yml`** — site config: title, theme (cosmo, heavily overridden), CSS, header/footer includes
+- **`index.qmd`** — the single-page site. Raw HTML for the top bar, intro, and footer; Markdown `##` headings for sections
+- **`styles.css`** — all visual styling; design tokens (colors, fonts, widths) live in `:root` at the top
+- **`head.html`** — Google Fonts link (Newsreader for headings, Source Sans 3 for body)
+- **`nav-active.html`** — small script: highlights the current section in the top nav, opens `.paper-link` links in a new tab
+- **`photo.jpg`** — web-sized profile photo used by the page (`photo.png` is the full-resolution original, not referenced)
 - **`_site/`** — build output (do not edit directly)
 
-The `brand` theme entry in `_quarto.yml` expects a `_brand.yml` file for brand tokens (colors, fonts). If one doesn't exist yet, Quarto will fall back to cosmo defaults.
+Layout model: each `## Heading {#id}` becomes a `section.level2`, styled as a two-column row (sticky heading on the left, content on the right). Section content must be wrapped in a `::: sec-body` fenced div so it occupies the right column as one block. Add a nav link in the top bar for any new section.
 
-New pages are added by creating a `.qmd` file and registering it under `website.navbar` (or `website.sidebar`) in `_quarto.yml`.
+Do not use an `<h1>` in `index.qmd`; Quarto hoists the first `h1` out as the page title. The intro name uses a `div.name` with `role="heading"`.

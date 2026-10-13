@@ -10,8 +10,6 @@ format:
     theme: cosmo
     css: styles.css
     toc: false
+    include-in-header: head.html
     include-after-body: nav-active.html
     anchor-sections: false
-
-
-
