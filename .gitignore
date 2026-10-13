@@ -1,5 +1,6 @@
 # Quarto build output and cache
 _site/
+site_libs/
 .quarto/
 
 # PAI internal planning files
