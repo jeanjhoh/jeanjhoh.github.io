@@ -182,6 +182,14 @@ with [Jorge Guzman](https://www.jorgeguzman.co/)
 *Data collection stage*
 :::
 
+::: paper
+**Algorithmic Matching of Founders and Venture Capital Investors**
+
+with [Brandy Aven](https://www.brandyaven.com/)
+
+*Development stage*
+:::
+
 ```{=html}
 </div>
 ```
