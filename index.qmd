@@ -57,7 +57,7 @@ I am an Assistant Professor of Organization Theory and Entrepreneurship at the T
 
 <!-- My research examines (1) how individuals' socioeconomic origins affect their entrepreneurial outcomes, and (2) how entrepreneurs are motivated by creating social impact and solving specific problems like climate change. To answer these questions, I employ a variety of methods including field experiments, econometric analysis of archival data, and qualitative interviews. My recent work focuses on how the socioeconomic backgrounds of entrepreneurs and investors shape startup investor behaviors. This work was selected as a finalist for the 2023 Organization Science/INFORMS Dissertation Proposal Competition. -->
 
-I received my PhD in Management at Columbia Business School, MS in Strategy and BBA from Seoul National University. I grew up in Upstate New York and Seoul, Korea, and currently live in Pittsburgh. When I am not doing research, I enjoy rowing, cross fit, and spending time with my dog Ravioli.
+I received my PhD in Management at Columbia Business School, MS in Strategy and BBA from Seoul National University. I grew up in Upstate New York and Seoul, Korea, and currently live in Pittsburgh. When I am not doing research, I enjoy rowing and spending time with my dog Ravioli.
 :::
 
 ## What's New {#whats-new}
@@ -139,7 +139,7 @@ Author One, Author Two
 ```{=html}
 </div>
 
-<div class="sub">Working papers &amp; works in progress</div>
+<div class="sub">Working papers &amp; selected works in progress</div>
 <div class="group">
 ```
 
@@ -148,7 +148,7 @@ Author One, Author Two
 
 Solo-authored
 
-*Under review*
+*Working paper*
 :::
 
 ::: paper
@@ -156,7 +156,7 @@ Solo-authored
 
 Solo-authored
 
-*Working paper*
+*Under review*
 :::
 
 ::: paper
@@ -165,22 +165,6 @@ Solo-authored
 with [Wyatt Lee](https://www.leewyatt.com/)
 
 *Experimental design stage*
-:::
-
-::: paper
-**How Founder Race and Class Interact to Shape Investor Interest: Evidence from an Email Field Experiment**
-
-with [Melody Chang](https://www.melody-chang.com/) and [Siyu Yu](https://michiganross.umich.edu/faculty-research/faculty/siyu-yu)
-
-*Experimental design stage*
-:::
-
-::: paper
-**Who Builds AI Startups?**
-
-with [Solène Delecourt](https://sites.google.com/berkeley.edu/solenedelecourt/home)
-
-*Data collection stage*
 :::
 
 ```{=html}
@@ -197,6 +181,11 @@ with [Solène Delecourt](https://sites.google.com/berkeley.edu/solenedelecourt/h
   <h3>Carnegie Mellon University <span class="role">Instructor</span></h3>
   <ul class="courses">
     <li>
+      <span class="num">47-892</span>
+      <span>Seminar in Organizational Theory</span>
+      <span class="meta"><b>PhD</b>Fall 2026</span>
+    </li>
+    <li>
       <span class="num">47-889</span>
       <span>Proseminar in Organizational Research</span>
       <span class="meta"><b>PhD</b>Spring 2026</span>
@@ -204,7 +193,7 @@ with [Solène Delecourt](https://sites.google.com/berkeley.edu/solenedelecourt/h
     <li>
       <span class="num">70-415</span>
       <span>Introduction to Entrepreneurship</span>
-      <span class="meta"><b>Undergrad</b>Fall 2025 · Fall 2024</span>
+      <span class="meta"><b>Undergrad</b>Fall 2026 · Fall 2025 · Fall 2024</span>
     </li>
   </ul>
 </div>
