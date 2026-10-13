@@ -175,19 +175,19 @@ with [Wyatt Lee](https://www.leewyatt.com/)
 :::
 
 ::: paper
-**Pre-college Educational Background and Entrepreneurial Entry**
-
-with [Jorge Guzman](https://www.jorgeguzman.co/)
-
-*Data collection stage*
-:::
-
-::: paper
 **Algorithmic Matching of Founders and Venture Capital Investors**
 
 with [Brandy Aven](https://www.brandyaven.com/)
 
 *Development stage*
+:::
+
+::: paper
+**Pre-College Educational Background and Entrepreneurial Entry**
+
+with [Jorge Guzman](https://www.jorgeguzman.co/)
+
+*Data collection stage*
 :::
 
 ```{=html}
