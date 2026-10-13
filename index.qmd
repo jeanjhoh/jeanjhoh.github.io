@@ -13,7 +13,9 @@ toc: false
     <a class="brand" href="#top">Jean Joohyun Oh</a>
     <nav class="topnav" aria-label="Sections">
       <a href="#about">About</a>
+      <!-- Hidden for now; restore with the What's New section below.
       <a href="#whats-new">News</a>
+      -->
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a class="cv" href="cv.pdf" target="_blank" rel="noopener noreferrer">CV <span class="ext">↗</span></a>
@@ -60,11 +62,15 @@ I am an Assistant Professor of Organization Theory and Entrepreneurship at the T
 I received my PhD in Management at Columbia Business School, MS in Strategy and BBA from Seoul National University. I grew up in Upstate New York and Seoul, Korea, and currently live in Pittsburgh. When I am not doing research, I enjoy rowing and spending time with my dog Ravioli.
 :::
 
+<!-- HIDDEN: What's New section. To bring it back, delete this comment's
+     opening and closing lines and restore the News link in the top bar.
+     To add an item: copy one <li> block. Most recent first.
+     (Keep nested HTML comments out of this block; they end it early.)
+
 ## What's New {#whats-new}
 
 ::: sec-body
 ```{=html}
-<!-- To add an item: copy one <li> block. Most recent first. -->
 <ul class="news">
   <li>
     <time>Mar 2026</time>
@@ -77,6 +83,7 @@ I received my PhD in Management at Columbia Business School, MS in Strategy and 
 </ul>
 ```
 :::
+-->
 
 ## Research {#research}
 
